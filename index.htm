@@ -1,37 +1,37 @@
 ﻿<!DOCTYPE html><html lang="jp"><head><meta charset="utf-8"><title>WebGL Demo</title>
-<link rel="stylesheet"		type="text/css"		href="./styleSheet.css"></link>
-<script type='text/javascript' src='libFileRelationship.js'></script>
-<script type="text/javascript"	src="./extString.js"></script><!--String object extension-->
-<script type="text/javascript"	src="./extArray.js"></script><!--Array object extension-->
-<script type="text/javascript"	src="./extMath.js"></script><!--Math object extension-->
+<link rel="stylesheet"		type="text/css"		href="https://github.com/garameki/WebGL_Test/styleSheet.css"></link>
+<script type='text/javascript' src="https://github.com/garameki/WebGL_Test/libFileRelationship.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/extString.js"></script><!--String object extension-->
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/extArray.js"></script><!--Array object extension-->
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/extMath.js"></script><!--Math object extension-->
 
-<script type="text/javascript"	src="./libElement.js"></script>
-<script type="text/javascript"	src="./myXYZ.js"></script>
-<script type="text/javascript"	src="./myXYZManipulation.js"></script>
-	<script type="text/javascript"	src="./myXYZManipulation_buttonDETECT.js"></script>
-	<script type="text/javascript"	src="./myXYZManipulation_buttonPOWER.js"></script>
-	<script type="text/javascript"	src="./myXYZManipulation_buttonGRAVITY.js"></script>
-<script type="text/javascript"	src="./myXYZRevolutions.js"></script>
-<script type="text/javascript"	src="./myXYZGravity.js"></script>
-<script type="text/javascript"	src="./myMat4.js"></script>
-<script	type="text/javascript"	src="./myVec3.js"></script>
-<script	type="text/javascript"	src="./mySendMatrix.js"></script>
-<script	type="text/javascript"	src="./myShaders.js"></script>
-<script	type="text/javascript"	src="./mySendAttribUniform.js"></script>
-<script	type="text/javascript"	src="./myPlanetData.js"></script>
-<script	type="text/javascript"	src="./myInfo.js"></script>
-<script	type="text/javascript"	src="./myFacts.js"></script>
-
-
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/libElement.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZ.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZManipulation.js"></script>
+	<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZManipulation_buttonDETECT.js"></script>
+	<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZManipulation_buttonPOWER.js"></script>
+	<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZManipulation_buttonGRAVITY.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZRevolutions.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myXYZGravity.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myMat4.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myVec3.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/mySendMatrix.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myShaders.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/mySendAttribUniform.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myPlanetData.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myInfo.js"></script>
+<script	type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myFacts.js"></script>
 
 
-<script type="text/javascript"	src="./myColorName.js"></script>
-<script type="text/javascript"	src="./myLabel.js"></script>
-<script type="text/javascript"	src="./shapes/myShape.js"></script>
-	<script type="text/javascript"	src="./shapes/flame.js"></script>
-	<script type="text/javascript"	src="./shapes/lines.js"></script>
-<script type="text/javascript"	src="./myTextures.js"></script>
-<script type="text/javascript"	src="./myFBOs.js"></script>
+
+
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myColorName.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myLabel.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/shapes/myShape.js"></script>
+	<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/shapes/flame.js"></script>
+	<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/shapes/lines.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myTextures.js"></script>
+<script type="text/javascript"	src="https://github.com/garameki/WebGL_Test/myFBOs.js"></script>
 
 
 <!--******************************* SHADER PROGMRAMS *****************************************************-->
@@ -39,18 +39,18 @@
  
 
 <!--*** shader programs, FBOs and controllers of CDF ***-->
-<script type="text/javascript" src="./shaders/spaceShip.js"></script>
-<script type="text/javascript" src="./shaders/makeTextureOfSaturnFromLightPointOfViewForSaturn.js"></script>
-<script type="text/javascript" src="./shaders/makeTextureOfSaturnFromLightPointOfViewForShadow.js"></script>
-<script	type="text/javascript" src="./shaders/mixTwoTexturesWithDepthes.js"></script>
-<script type="text/javascript" src="./shaders/makeStencilFromTextureOnBlack.js"></script>
-<script	type="text/javascript" src="./shaders/makeStencilFromShadowUsingSaturnAndRing.js"></script>
-<script type="text/javascript" src="./shaders/makeStencilFromTwoStencilTextures.js"></script>
-<script	type="text/javascript" src="./shaders/drawPolygonOffStencil.js"></script>
-<script type="text/javascript" src="./shaders/drawPolygonMoreTransparentlyOnStencil.js"></script>
-<script type="text/javascript" src="./shaders/drawTextureOnClipSpace.js"></script>
-<script type="text/javascript" src="./shaders/drawSaturnWithRoundedTextureOnLightSide.js"></script>
-<script type="text/javascript" src="./shaders/drawSaturnWithRectangleTextureOnDarkSide.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/spaceShip.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/makeTextureOfSaturnFromLightPointOfViewForSaturn.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/makeTextureOfSaturnFromLightPointOfViewForShadow.js"></script>
+<script	type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/mixTwoTexturesWithDepthes.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/makeStencilFromTextureOnBlack.js"></script>
+<script	type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/makeStencilFromShadowUsingSaturnAndRing.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/makeStencilFromTwoStencilTextures.js"></script>
+<script	type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/drawPolygonOffStencil.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/drawPolygonMoreTransparentlyOnStencil.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/drawTextureOnClipSpace.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/drawSaturnWithRoundedTextureOnLightSide.js"></script>
+<script type="text/javascript" src="https://github.com/garameki/WebGL_Test/shaders/drawSaturnWithRectangleTextureOnDarkSide.js"></script>
 
 
 <script type='text/javascript'>

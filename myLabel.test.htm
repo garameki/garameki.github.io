@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html><html><head>
+<link rel="stylesheet"		type="text/css"		href="./styleSheet.css"></link>
+<script type='text/javascript' src='./libElement.js'></script>
+<script type='text/javascript' src='./myLabel.js'></script>
+<script type='text/javascript' src='./myColorName.js'></script>
+<script type='text/javascript' src='./myMat4.js'></script>
+
+<script type='text/javascript'>
+/**
+ *      -test condition-
+ * chrome version 66.0.3359.181
+ *
+**/
+
+onload = function(){
+
+	/** prepare label **/
+	myLabel.join('earth');
+	myLabel.earth.addText(0,0,5,'Tokyo',myColorName.magenta(1));
+	myLabel.earth.addText(0,0,-5,'Los Angels',myColorName.green(1));
+
+	/** prepare gl context **/
+	var gl = CANVAS.getContext('2d');
+
+	/** prepare perspective matrix **/
+	var fieldOfView = 70 * Math.PI * 0.005555556;// 1.0 / 180;	//in radian;
+	var aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
+	var zNear = 0.01;
+	var zFar = 10000000.0;
+	myMat4.loadPerspective(fieldOfView,aspect,zNear,zFar);
+	var pmat = myMat4.arr;
+
+	var mvmat;
+	var dAngle = 1;//Math.PI * 0.0055555;//1 degree
+	var theta=0;
+	function render(timeStamp){
+		/** prepare model view matrix **/
+		myMat4.loadIdentity();//load Identity matrix to accumerator
+		myMat4.rot(1,1,0,theta);//accumurate a matrix of a rotation with a axis by multiplication
+		myMat4.trans(0,0,-10);
+		mvmat = myMat4.arr;
+
+
+		//calculate new position
+		myLabel.earth.repos(gl,pmat,mvmat);//REPOSITION LABELS
+		theta+=dAngle*0.01;
+
+		window.requestAnimationFrame(render);
+	}
+	window.requestAnimationFrame(render);
+};//start
+</script></head><body>
+<div id='canvasContainer' style='position:relative;'>
+<canvas id='CANVAS' width=512 height=512 style='background-color:black;'></canvas>
+</div>
+</body></html>

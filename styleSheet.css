@@ -1,0 +1,19 @@
+﻿body {
+	/* overflow:hidden; */
+}
+
+#canvasContainer {/* this has one canvas and more than one text elements*/
+	position:relative;
+/*	overflow:hidden; */
+
+}
+
+.divGLText {/*this have a element as textNode*/
+	position:absolute;
+/*	overflow:hidden; */
+	z-index:1000;
+}
+
+.textGLText {/* text printed on weggl canvas */
+	color:red;
+}

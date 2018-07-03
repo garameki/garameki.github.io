@@ -1,0 +1,5 @@
+searchWord.bat
+node_modules
+package-lock.json
+_test_
+

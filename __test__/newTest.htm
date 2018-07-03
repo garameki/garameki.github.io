@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head>
+<script type='text/javascript'>
+
+function pre(a){
+	let obj = { };
+	Object.defineProperty(obj,'a',{get:function(){return a;},enumerable:false,configurable:false});
+	Object.defineProperty(obj,'func',{value:func,writable:false,enumerable:false,configurable:false});
+	function func(){
+		a++;
+	};
+	return obj;
+};
+
+const aa = new pre(10);
+console.log(aa.a);
+console.log(aa.func);
+aa.func();
+console.log(aa.a);
+
+
+
+</script>
+
+
+</head><body><div></div></body></html>

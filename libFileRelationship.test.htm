@@ -1,0 +1,48 @@
+<!DOCTYPE html><html><head>
+<script type='text/javascript' src='./libFileRelationship.js'></script>
+<script type='text/javascript' src='./myColorName.js'></script>
+<script type='text/javascript'>
+var FR = libFileRelationship;
+
+here = 'testHTML';
+FR.create(here);
+FR[here].relatedTo = 'myColorName';
+
+console.log(FR);
+
+onload=function(){
+	let count = 0;
+	let flag = true;
+	let nameP,nameC,ii;
+	var hoge = setInterval(function(){
+		flag=true;
+		for(nameP in FR){
+			for(ii in FR[nameP].aAccounts){
+				nameC = FR[nameP].aAccounts[ii];
+				flag = flag && (nameC in window);
+				if(!flag)break;
+			}
+			if(!flag)break;
+		}
+		if(flag){
+			clearInterval(hoge);
+			start();
+		}else if(++count>30){
+			clearInterval(hoge);
+			console.error(nameP,"で使用する外部ファイル",nameC,"が読み込まれていません");
+		}
+	},100);
+};
+
+function start(){
+
+	console.log("OK");
+
+
+};
+
+
+
+
+</script>
+</head><body><div></div></body></html>
